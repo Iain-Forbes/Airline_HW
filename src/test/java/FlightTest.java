@@ -79,4 +79,10 @@ public class FlightTest {
         assertEquals(2, flight2.getAllPassengers());
     }
 
+    @Test
+    public void canCheckSeatsRemaining() {
+        flight2.checkIn(passenger1);
+        assertEquals(1, flight2.getRemainingSeats());
+    }
+
 }

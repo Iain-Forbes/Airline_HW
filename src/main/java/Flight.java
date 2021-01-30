@@ -29,6 +29,7 @@ public class Flight {
     public int getAllPassengers() {
         return passengers.size();
     }
+
     public PlaneType getPlane() {
         return plane;
     }
@@ -68,6 +69,12 @@ public class Flight {
     public void disembark() {
         this.passengers.clear();
     }
+
+    public int getRemainingSeats() {
+        return plane.getTotalSeats() - getAllPassengers();
+
+    }
+
 }
 
 
