@@ -85,4 +85,7 @@ public class FlightTest {
         assertEquals(1, flight2.getRemainingSeats());
     }
 
+
+
+
 }

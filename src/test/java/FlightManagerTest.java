@@ -9,12 +9,13 @@ public class FlightManagerTest {
     Flight flight;
     Passenger passenger;
     FlightManager flightManager;
+    PlaneType plane;
 
 
     @Before
     public void setUp() {
         passenger = new Passenger("Bob", 3);
-        flight = new Flight(PlaneType.SKYHAWK, "G22", "GLA", "LAX", "10:00");
+        flight = new Flight(PlaneType.TINYPLANE, "G22", "GLA", "LAX", "10:00");
         flightManager = new FlightManager(passenger, flight);
 
 
@@ -25,5 +26,9 @@ public class FlightManagerTest {
         assertEquals(30, flightManager.getPassengerBagWeight());
     }
 
+    @Test
+    public void canGetMaxBagWeight(){
+        assertEquals(6, flightManager.bagAllowancePerPass());
+    }
 
 }
